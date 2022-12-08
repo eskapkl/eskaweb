@@ -2,283 +2,291 @@
 <html>
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>eSKa Pekalongan</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />
-	<link href="css/templatemo-style.css" rel="stylesheet" />
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <style>
+    body,
+    html {
+      height: 100%;
+      font-family: "Inconsolata", sans-serif;
+    }
+
+    .bgimg {
+      background-position: center;
+      background-size: cover;
+      background-image: url("./images/mainbg.jpg");
+      min-height: 75%;
+    }
+
+    .menu {
+      display: none;
+    }
+  </style>
 </head>
-<!--
-
-Simple House
-
-https://templatemo.com/tm-539-simple-house
-
--->
 
 <body>
-	<div class="container">
-		<!-- Top box -->
-		<!-- Logo & Site Name -->
-		<div class="placeholder">
-			<div class="parallax-window" data-parallax="scroll" data-image-src="img/simple-house-01.jpg">
-				<div class="tm-header">
-					<div class="row tm-header-inner">
-						<div class="col-md-6 col-12">
-							<img src="img/simple-house-logo.png" alt="Logo" class="tm-site-logo" />
-							<div class="tm-site-text-box">
-								<h1 class="tm-site-title">eSKa Pekalongan</h1>
-								<h6 class="tm-site-description">Enak Hemat Bersahabat</h6>
-							</div>
-						</div>
-						<nav class="col-md-6 col-12 tm-nav">
-							<ul class="tm-nav-ul">
-								<li class="tm-nav-li">
-									<a href="index.html" class="tm-nav-link active">Menu</a>
-								</li>
-								<li class="tm-nav-li">
-									<a href="about.html" class="tm-nav-link">About</a>
-								</li>
-								<li class="tm-nav-li">
-									<a href="contact.html" class="tm-nav-link">Contact</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
 
-		<main>
-			<header class="row tm-welcome-section">
-				<h2 class="col-12 text-center tm-section-title">
-					Welcome to Simple House
-				</h2>
-				<p class="col-12 text-center">
-					Total 3 HTML pages are included in this template. Header image has a
-					parallax effect. You can feel free to download, edit and use this
-					TemplateMo layout for your commercial or non-commercial websites.
-				</p>
-			</header>
+  <!-- Links (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-row w3-padding w3-black">
+      <div class="w3-col s3">
+        <a href="#" class="w3-button w3-block w3-black">HOME</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#where" class="w3-button w3-block w3-black">WHERE</a>
+      </div>
+    </div>
+  </div>
 
-			<div class="tm-paging-links">
-				<nav>
-					<ul>
-						<li class="tm-paging-item">
-							<a href="#" class="tm-paging-link active">Makanan</a>
-						</li>
-						<li class="tm-paging-item">
-							<a href="#" class="tm-paging-link">Minuman</a>
-						</li>
-						<li class="tm-paging-item">
-							<a href="#" class="tm-paging-link">Lainnya</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
+  <!-- Header with image -->
+  <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+      <span class="w3-tag">Open from 6am to 5pm</span>
+    </div>
+    <div class="w3-display-middle w3-center">
+      <span class="w3-text-white" style="font-size:90px">Eska<br>Pekalongan</span>
+    </div>
+    <div class="w3-display-bottomright w3-center w3-padding-large">
+      <span class="w3-text-white">15 Adr street, 5015</span>
+    </div>
+  </header>
 
-			<!-- Gallery -->
-			<div class="row tm-gallery">
-				<!-- gallery page 1 -->
-				<div id="tm-gallery-page-makanan" class="tm-gallery-page">
-					<!-- <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-						<figure>
-							<img src="img/gallery/01.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-							<figcaption>
-								<h4 class="tm-gallery-title">Fusce dictum finibus</h4>
-								<p class="tm-gallery-description">
-									Nam in suscipit nisi, sit amet consectetur metus. Ut sit
-									amet tellus accumsan
-								</p>
-								<p class="tm-gallery-price">$45 / $55</p>
-							</figcaption>
-						</figure>
-					</article>					 -->
-				</div>
-				<!-- gallery page 1 -->
+  <!-- Add a background color and large text to the whole page -->
+  <div class="w3-sand w3-grayscale w3-large">
 
-				<!-- gallery page 2 -->
-				<div id="tm-gallery-page-minuman" class="tm-gallery-page hidden">
-					<!-- <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-						<figure>
-							<img src="img/gallery/04.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-							<figcaption>
-								<h4 class="tm-gallery-title">Salad Menu One</h4>
-								<p class="tm-gallery-description">
-									Proin eu velit egestas, viverra sapien eget, consequat nunc.
-									Vestibulum tristique
-								</p>
-								<p class="tm-gallery-price">$25</p>
-							</figcaption>
-						</figure>
-					</article> -->
-				</div>
-				<!-- gallery page 2 -->
+    <!-- About Container -->
+    <div class="w3-container" id="about">
+      <div class="w3-content" style="max-width:700px">
+        <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE CAFE</span></h5>
+        <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch
+          sandwiches, as well as a selection of sides and salads and other good stuff.</p>
+        <div class="w3-panel w3-leftbar w3-light-grey">
+          <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new
+              sweet.</i></p>
+          <p>Chef, Coffeeist and Owner: Liam Brown</p>
+        </div>
+        <img src="./images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+        <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
+        <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
+      </div>
+    </div>
 
-				<!-- gallery page 3 -->
-				<div id="tm-gallery-page-lainnya" class="tm-gallery-page hidden">
-					<!-- <article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
-						<figure>
-							<img src="img/gallery/08.jpg" alt="Image" class="img-fluid tm-gallery-img" />
-							<figcaption>
-								<h4 class="tm-gallery-title">Noodle One</h4>
-								<p class="tm-gallery-description">
-									Orci varius natoque penatibus et magnis dis parturient
-									montes, nascetur ridiculus mus.
-								</p>
-								<p class="tm-gallery-price">$12.50</p>
-							</figcaption>
-						</figure>
-					</article>					 -->
-				</div>
-				<!-- gallery page 3 -->
-			</div>
-			<div id="insertHere"></div>
+    <!-- Menu Container -->
+    <div class="w3-container" id="menu">
+      <div class="w3-content" style="max-width:700px">
 
-			<div class="tm-section tm-container-inner">
-				<div class="row">
-					<div class="col-md-6">
-						<figure class="tm-description-figure">
-							<img src="img/img-01.jpg" alt="Image" class="img-fluid" />
-						</figure>
-					</div>
-					<div class="col-md-6">
-						<div class="tm-description-box">
-							<h4 class="tm-gallery-title">Maecenas nulla neque</h4>
-							<p class="tm-mb-45">
-								Redistributing this template as a downloadable ZIP file on any
-								template collection site is strictly prohibited. You will need
-								to
-								<a rel="nofollow" href="https://templatemo.com/contact">talk to us</a>
-								for additional permissions about our templates. Thank you.
-							</p>
-							<a href="about.html" class="tm-btn tm-btn-default tm-right">Read More</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="div1"></div>
-		</main>
+        <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE MENU</span></h5>
 
-		<footer class="tm-footer text-center">
-			<p>
-				Copyright &copy; 2020 Simple House | Design:
-				<a rel="nofollow" href="https://templatemo.com">TemplateMo</a>
-			</p>
-		</footer>
-	</div>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/parallax.min.js"></script>
-	<script>
-		$(document).ready(function () {
-			// Handle click on paging links
-			$(".tm-paging-link").click(function (e) {
-				e.preventDefault();
+        <div class="w3-row w3-center w3-card w3-padding">
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+            <div class="w3-col s4 tablink">Eat</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+            <div class="w3-col s4 tablink">Drink</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Other');">
+            <div class="w3-col s4 tablink">Other</div>
+          </a>
+        </div>
 
-				var page = $(this).text().toLowerCase();
-				$(".tm-gallery-page").addClass("hidden");
-				$("#tm-gallery-page-" + page).removeClass("hidden");
-				$(".tm-paging-link").removeClass("active");
-				$(this).addClass("active");
-			});
-		});
-		function getData() {
-			var query_params = new URLSearchParams({
-				'limit': 100,
-				'query_type': 'and',
-			});
-			var url = 'https://sheet2api.com/v1/D3KTgqblROGg/daftar-menu/Sheet1?' + query_params;
+        <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
 
-			fetch(url)
-				.then(response => response.json())
-				.then(data => {
-					console.log(data);
-					let mainData = []
-					mainData = data
-					let makananArr = []
-					let minumanArr = []
-					let otherArr = []
+        </div>
 
-					for (let i = 0; i < mainData.length; i++) {
-						const e = mainData[i];
-						if (e.Kategori == "Makanan"){
-							makananArr.push(e)
-						} else if (e.Kategori == "Minuman"){
-							minumanArr.push(e)
-						} else {
-							otherArr.push(e)
-						}
-					}
+        <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">          
+          
+        </div>
 
-					addElement("tm-gallery-page-makanan", makananArr)
-					addElement("tm-gallery-page-minuman", minumanArr)
-					addElement("tm-gallery-page-lainnya", otherArr)
+        <div id="Other" class="w3-container menu w3-padding-48 w3-card">
+          
+        </div>
+        <img src="./images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+      </div>
+    </div>
 
-				})
-				.catch((error) => {
-					console.error('Error:', error);
-				});
-		}
+    <!-- Contact/Area Container -->
+    <div class="w3-container" id="where" style="padding-bottom:32px;">
+      <div class="w3-content" style="max-width:700px">
+        <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
+        <p>Find us at some address at some place.</p>
+        <img src="./images/map.jpg" class="w3-image" style="width:100%">
+        <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand
+          your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+        <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+          <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required
+              name="People"></p>
+          <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required
+              name="date" value="2020-11-16T20:00"></p>
+          <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements"
+              required name="Message"></p>
+          <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+        </form>
+      </div>
+    </div>
 
-		getData()
+    <!-- End page content -->
+  </div>
 
-		function getIdFromUrl(url) { return url.match(/[-\w]{25,}/); }
+  <!-- Footer -->
+  <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+        class="w3-hover-text-green">w3.css</a></p>
+  </footer>
 
-		function addElement(parentElement, arr) {
-			for (let i = 0; i < arr.length; i++) {
-				const e = arr[i];
+  <script>
+    // Tabbed Menu
+    function openMenu(evt, menuName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("menu");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+      }
+      document.getElementById(menuName).style.display = "block";
+      evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+    }
+    document.getElementById("myLink").click();
+    function getData() {
+      var query_params = new URLSearchParams({
+        'limit': 100,
+        'query_type': 'and',
+      });
+      var url = 'https://sheet2api.com/v1/D3KTgqblROGg/daftar-menu/Sheet1?' + query_params;
 
-				const artc = document.createElement("article");
-				artc.className = "col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item";
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          let mainData = []
+          mainData = data
+          let makananArr = []
+          let minumanArr = []
+          let otherArr = []
 
-				const figu = document.createElement("figure");
+          for (let i = 0; i < mainData.length; i++) {
+            const e = mainData[i];
+            if (e.Kategori == "Makanan") {
+              makananArr.push(e)
+            } else if (e.Kategori == "Minuman") {
+              minumanArr.push(e)
+            } else {
+              otherArr.push(e)
+            }
+          }
 
-				const img = document.createElement("img");
+          addElement("Eat", makananArr)
+          addElement("Drinks", minumanArr)
+          addElement("Other", otherArr)
 
-				let id = getIdFromUrl(e.Gambar)
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    }
+    function getIdFromUrl(url) { return url.match(/[-\w]{25,}/); }
+    getData()
+    function addElement(parentElement, arr) {
+      for (let i = 0; i < arr.length; i++) {
+        const e = arr[i];
+        // <img src="./images/coffeeshop.jpg" style="width: -webkit-fill-available;" alt="">
+        // <h5>Bread Basket</h5>
+        // <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
 
-				let usedUrl = "https://drive.google.com/uc?export=view&id=" + id
-				img.setAttribute("src", usedUrl);
-				img.className = "img-fluid tm-gallery-img";
+        const img = document.createElement("img");
 
-				const figca = document.createElement("figcaption");
+        let id = getIdFromUrl(e.Gambar)
 
-				const hfour = document.createElement("h4");
-				hfour.className = "tm-gallery-title";
-				const textHFour = document.createTextNode(e.Nama ? e.Nama : "");
-				hfour.append(textHFour);
+        let usedUrl = "https://drive.google.com/uc?export=view&id=" + id
+        img.setAttribute("src", usedUrl);
+        img.className = "img-fluid tm-gallery-img";
+        img.style = "width: -webkit-fill-available;"
 
-				const para = document.createElement("p");
-				para.className = "tm-gallery-description"
-				const textPara = document.createTextNode(e.Deskripsi ? e.Deskripsi : "");
-				para.append(textPara);
+        const hFive = document.createElement("h5");
+        const hPara = document.createTextNode(e.Nama);
+        hFive.append(hPara);
 
-				const para2 = document.createElement("p");
-				para2.className = "tm-gallery-price"
-				const textPara2 = document.createTextNode(e.Harga ? e.Harga : "");
-				para2.append(textPara2);
+        const paraa = document.createElement("p");
+        const textParaa = document.createTextNode(e.Deskripsi);
+        paraa.append(textParaa);
 
-				figca.append(hfour);
-				figca.append(para);
-				figca.append(para2);
+        const price = document.createElement("p");
+        const textPrice = document.createTextNode(e.Harga);
+        price.append(textPrice);
 
-				figu.append(img);
-				figu.append(figca);
+        const breaak = document.createElement("br");
+        const elementmain = document.getElementById(parentElement);
 
-				artc.append(figu);
+        elementmain.appendChild(img);
+        elementmain.appendChild(hFive);
+        elementmain.appendChild(paraa);
+        elementmain.appendChild(price);
+        elementmain.appendChild(breaak);
 
-				const element = document.getElementById(parentElement);
-				element.appendChild(artc);
-			}
-		}
 
-      // document.getElementById("insertHere").outerHTML("box")
 
-      // document.getElementById("insertHere").innerHTML = "I have changed!";
+        // const artc = document.createElement("article");
+        // artc.className = "col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item";
 
-      // document.body.innerHTML = box;
-	</script>
+        // const figu = document.createElement("figure");
+
+        // const img = document.createElement("img");
+
+        // let id = getIdFromUrl(e.Gambar)
+
+        // let usedUrl = "https://drive.google.com/uc?export=view&id=" + id
+        // img.setAttribute("src", usedUrl);
+        // img.className = "img-fluid tm-gallery-img";
+
+        // const figca = document.createElement("figcaption");
+
+        // const hfour = document.createElement("h4");
+        // hfour.className = "tm-gallery-title";
+        // const textHFour = document.createTextNode(e.Nama ? e.Nama : "");
+        // hfour.append(textHFour);
+
+        // const para = document.createElement("p");
+        // para.className = "tm-gallery-description"
+        // const textPara = document.createTextNode(e.Deskripsi ? e.Deskripsi : "");
+        // para.append(textPara);
+
+        // const para2 = document.createElement("p");
+        // para2.className = "tm-gallery-price"
+        // const textPara2 = document.createTextNode(e.Harga ? e.Harga : "");
+        // para2.append(textPara2);
+
+        // figca.append(hfour);
+        // figca.append(para);
+        // figca.append(para2);
+
+        // figu.append(img);
+        // figu.append(figca);
+
+        // artc.append(figu);
+
+        // const element = document.getElementById(parentElement);
+        // element.appendChild(artc);
+      }
+    }
+
+  </script>
+
 </body>
 
 </html>
