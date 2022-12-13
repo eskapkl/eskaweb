@@ -168,8 +168,9 @@
         'limit': 100,
         'query_type': 'and',
       });
-      var url = 'https://sheet2api.com/v1/D3KTgqblROGg/daftar-menu/Sheet1?' + query_params;
+      // var url = 'https://sheet2api.com/v1/D3KTgqblROGg/daftar-menu/Sheet1?' + query_params;
 
+      var url = "https://opensheet.elk.sh/1YpXy4geymZEGyEEJd5E21_JSr3u7V8Ovtg2qWaMvF2w/Sheet1"
       fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -190,6 +191,9 @@
               otherArr.push(e)
             }
           }
+          console.log(makananArr)
+          console.log(minumanArr)
+          console.log(otherArr)
 
           addElement("Eat", makananArr)
           addElement("Drinks", minumanArr)
@@ -200,7 +204,13 @@
           console.error('Error:', error);
         });
     }
-    function getIdFromUrl(url) { return url.match(/[-\w]{25,}/); }
+    function getIdFromUrl(url) { 
+      if (url){
+        return url.match(/[-\w]{25,}/); 
+      } else {
+        return ""
+      }
+    }
     getData()
     function addElement(parentElement, arr) {
       for (let i = 0; i < arr.length; i++) {
@@ -209,21 +219,26 @@
         // <h5>Bread Basket</h5>
         // <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
 
-        const img = document.createElement("img");
+        
 
         let id = getIdFromUrl(e.Gambar)
 
-        let usedUrl = "https://drive.google.com/uc?export=view&id=" + id
-        img.setAttribute("src", usedUrl);
-        img.className = "img-fluid tm-gallery-img";
-        img.style = "width: -webkit-fill-available;"
+        const img = document.createElement("img");
+
+        if(id){
+          let usedUrl = "https://drive.google.com/uc?export=view&id=" + id
+          img.setAttribute("src", usedUrl);
+          img.className = "img-fluid tm-gallery-img";
+          img.style = "width: -webkit-fill-available;"
+        }
+        
 
         const hFive = document.createElement("h5");
         const hPara = document.createTextNode(e.Nama);
         hFive.append(hPara);
 
         const paraa = document.createElement("p");
-        const textParaa = document.createTextNode(e.Deskripsi);
+        const textParaa = document.createTextNode(e.Deskripsi + " " + id);
         paraa.append(textParaa);
 
         const price = document.createElement("p");
