@@ -3,6 +3,7 @@
 
 <head>
   <title>Eska Pekalongan</title>
+  <link rel="icon" href="./images/icon.ico">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -11,18 +12,78 @@
     body,
     html {
       height: 100%;
+      min-width: fit-content;
+      margin: 0;
+      padding: 0;
       font-family: "Inconsolata", sans-serif;
     }
 
     .bgimg {
       background-position: center;
-      background-size: cover;
-      background-image: url("./images/mainbg.jpg");
+      background-size: contain;
+      background-image: url("./images/new_mainbg.png");
       min-height: 75%;
     }
 
+    .grid-container {
+      margin: 0 auto;
+      display: grid;
+      gap: 1rem;
+      padding-top: 48px !important;
+      padding-bottom: 48px !important;
+      box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+      padding: 0.01em 16px;
+      /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+    }
+
+    @media (min-width: 300px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+
+    .image {
+      border-radius: 10px 10px 0px 0px;
+      max-height: 200px;
+      min-height: 180px;
+      object-fit: cover;
+    }
+
+
     .menu {
       display: none;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      border-radius: 10px;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      padding: 2px 10px;
+    }
+
+    .no-margin {
+      margin: 0px;
+    }
+
+    .top-navbar {
+      top: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 1;
     }
   </style>
 </head>
@@ -30,7 +91,7 @@
 <body>
 
   <!-- Links (sit on top) -->
-  <div class="w3-top">
+  <div class="top-navbar">
     <div class="w3-row w3-padding w3-black">
       <div class="w3-col s3">
         <a href="#" class="w3-button w3-block w3-black">HOME</a>
@@ -53,10 +114,10 @@
       <span class="w3-tag">Open from 6am to 5pm</span>
     </div>
     <div class="w3-display-middle w3-center">
-      <span class="w3-text-white" style="font-size:90px">Eska<br>Pekalongan</span>
+      <span class="w3-text-white" style="font-size:90px">eSKa<br>Pekalongan</span>
     </div>
     <div class="w3-display-bottomright w3-center w3-padding-large">
-      <span class="w3-text-white">15 Adr street, 5015</span>
+      <span class="w3-tag">Pekalongan</span>
     </div>
   </header>
 
@@ -91,27 +152,31 @@
 
         <div class="w3-row w3-center w3-card w3-padding">
           <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
-            <div class="w3-col s4 tablink">Eat</div>
+            <div class="w3-col s4 tablink" id="btnEat">Eat</div>
           </a>
           <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
-            <div class="w3-col s4 tablink">Drink</div>
+            <div class="w3-col s4 tablink" id="btnDrinks">Drink</div>
           </a>
           <a href="javascript:void(0)" onclick="openMenu(event, 'Other');">
-            <div class="w3-col s4 tablink">Other</div>
+            <div class="w3-col s4 tablink" id="btnOther">Other</div>
           </a>
         </div>
 
-        <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+        <div id="Eat" class="grid-container">
 
         </div>
 
-        <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">          
-          
+        <div id="Drinks" class="grid-container">
+
         </div>
 
-        <div id="Other" class="w3-container menu w3-padding-48 w3-card">
-          
+        <div id="Other" class="grid-container">
+
         </div>
+        <!-- <div id="Other" class="w3-container menu w3-padding-48 w3-card">
+
+        </div> -->
+
         <img src="./images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
       </div>
     </div>
@@ -149,17 +214,30 @@
 
   <script>
     // Tabbed Menu
+    let makananArr = []
+    let minumanArr = []
+    let otherArr = []
+    let selectedArr = {}
     function openMenu(evt, menuName) {
-      var i, x, tablinks;
-      x = document.getElementsByClassName("menu");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+      var x = ["Eat", "Drinks", "Other"]
+      for (let i = 0; i < x.length; i++) {
+        const e = x[i];
+        if (e == menuName) {
+          document.getElementById(e).style.display = "grid"
+        } else {
+          document.getElementById(e).style.display = "none"
+        }
       }
+      // var i, x, tablinks;
+      // x = document.getElementsByClassName("menu");
+      // for (i = 0; i < x.length; i++) {
+      //   x[i].style.display = "none";
+      // }
       tablinks = document.getElementsByClassName("tablink");
       for (i = 0; i < x.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
       }
-      document.getElementById(menuName).style.display = "block";
+      // document.getElementById(menuName).style.display = "block";
       evt.currentTarget.firstElementChild.className += " w3-dark-grey";
     }
     document.getElementById("myLink").click();
@@ -177,9 +255,6 @@
           console.log(data);
           let mainData = []
           mainData = data
-          let makananArr = []
-          let minumanArr = []
-          let otherArr = []
 
           for (let i = 0; i < mainData.length; i++) {
             const e = mainData[i];
@@ -204,9 +279,9 @@
           console.error('Error:', error);
         });
     }
-    function getIdFromUrl(url) { 
-      if (url){
-        return url.match(/[-\w]{25,}/); 
+    function getIdFromUrl(url) {
+      if (url) {
+        return url.match(/[-\w]{25,}/);
       } else {
         return ""
       }
@@ -219,41 +294,43 @@
         // <h5>Bread Basket</h5>
         // <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
 
-        
 
         let id = getIdFromUrl(e.Gambar)
 
         const img = document.createElement("img");
 
-        if(id){
-          let usedUrl = "https://drive.google.com/uc?export=view&id=" + id
-          img.setAttribute("src", usedUrl);
-          img.className = "img-fluid tm-gallery-img";
-          img.style = "width: -webkit-fill-available;"
+        let inner = ""
+        if (id) {
+          // let usedUrl = "https://drive.google.com/uc?export=view&id=" + id
+          // img.setAttribute("src", usedUrl);
+          // img.className = "img-fluid tm-gallery-img";
+          // img.style = "width: -webkit-fill-available;"
+          id = "https://drive.google.com/uc?export=view&id=" + id
+          inner = `<img class="image" src="${id}" alt="Avatar" style="width:100%"><div class="container"><h5 class="no-margin"><b>${e.Nama}</b></h5><p class="no-margin">${e.Deskripsi}</p><p class="no-margin">${e.Harga}</p></div>`
+        } else {
+          inner = `<img class="image" src="./images/default-image.png" alt="Avatar" style="width:100%"><div class="container"><h5 class="no-margin"><b>${e.Nama}</b></h5><p class="no-margin">${e.Deskripsi}</p><p class="no-margin">${e.Harga}</p></div>`
         }
-        
 
-        const hFive = document.createElement("h5");
-        const hPara = document.createTextNode(e.Nama);
-        hFive.append(hPara);
+        const divv = document.createElement("div");
+        divv.className = "card";
+        // name, desc, image, price
 
-        const paraa = document.createElement("p");
-        const textParaa = document.createTextNode(e.Deskripsi + " " + id);
-        paraa.append(textParaa);
+        divv.setAttribute("onclick", `openModal(${i}, '${String(parentElement)}')`)
+        divv.innerHTML = inner;
 
-        const price = document.createElement("p");
-        const textPrice = document.createTextNode(e.Harga);
-        price.append(textPrice);
-
-        const breaak = document.createElement("br");
         const elementmain = document.getElementById(parentElement);
 
-        elementmain.appendChild(img);
-        elementmain.appendChild(hFive);
-        elementmain.appendChild(paraa);
-        elementmain.appendChild(price);
-        elementmain.appendChild(breaak);
+        elementmain.appendChild(divv);
+        // elementmain.appendChild(img);
+        // elementmain.appendChild(hFive);
+        // elementmain.appendChild(paraa);
+        // elementmain.appendChild(price);
+        // elementmain.appendChild(breaak);
 
+
+
+        // const temp = '<div class="card"><img src="https://drive.google.com/uc?export=view&id=0B5KH7oZiLJzzZHBGN04xRlhpWTg" alt="Avatar" style="width:100%"><div class="container"><h4><b>John Doe</b></h4> <p>Architect & Engineer</p> </div></div>'
+        // let x = `<div class="card"><img class="image" src="${}" alt="Avatar" style="width:100%"><div class="container"><h5 class="no-margin"><b>Nama Makanan</b></h5><p class="no-margin">Deskripsi Singkat</p><p class="no-margin">Rp 20.000</p></div></div>`
 
 
         // const artc = document.createElement("article");
@@ -300,6 +377,14 @@
       }
     }
 
+    function openModal(i, parent) {
+      console.log(i)
+      console.log(parent)
+      const s = parent == "Eat" ? makananArr : parent == "Drinks" ? minumanArr : otherArr
+      selectedArr = s[i]
+      console.log(selectedArr)
+      // console.log(`${name} ${desc} ${image} ${price}`)
+    }
   </script>
 
 </body>
